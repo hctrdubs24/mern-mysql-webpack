@@ -20,6 +20,9 @@ app.use(
 //* Settings.
 app.use(indexRoutes);
 app.use(taskRoutes);
-app.use(express.static(join(__dirname, "../client/dist")));
+app.use(express.static(join(__dirname, "../frontend/build")));
 
-app.listen(process.env.PORT || 5000, console.log(`Server is listenning on port ${process.env.PORT || 5000}`));
+app.listen(
+  process.env.PORT || 5000,
+  console.log(`Server is listenning on port ${process.env.PORT || 5000}`)
+);
